@@ -35,36 +35,4 @@ status-website:
     footer { text-align: center; padding: 2rem 0; opacity: 0.6; font-size: 0.85rem; }
     footer a { color: var(--text-color) !important; text-decoration: underline; }
     /* 如果想彻底隐藏页脚的 "Powered by Upptime" 可以取消注释以下代码 */
-    /* footer p { display: none; } */
-
-notifications:
-  - type: custom
-    url: $FEISHU_WEBHOOK
-    method: POST
-    headers:
-      Content-Type: application/json
-    # 转换为飞书支持的纯文本或富文本 JSON 格式
-    # Upptime 支持的变量：$TITLE (通知标题), $BODY (具体故障/恢复详情)
-    body: |
-      {
-        "msg_type": "post",
-        "content": {
-          "post": {
-            "zh_cn": {
-              "title": "【服务监控告警】",
-              "content": [
-                [
-                  {
-                    "tag": "text",
-                    "text": "$TITLE\n"
-                  },
-                  {
-                    "tag": "text",
-                    "text": "$BODY"
-                  }
-                ]
-              ]
-            }
-          }
-        }
-      }
+    footer p { display: none; }
