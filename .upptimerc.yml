@@ -22,14 +22,14 @@ status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   #cname: demo.upptime.js.org
-  baseUrl: /$REPO
+  baseUrl: /all-status
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
   name: "Service Monitor" 
   introTitle: "**系统服务实时监控**"
   introMessage: "m.imtd.top"
   navbar:
     - title: "Home"
-      href: /$REPO
+      href: /all-status
 
   customCSS: |
     footer { text-align: center; padding: 2rem 0; opacity: 0.6; font-size: 0.85rem; }
