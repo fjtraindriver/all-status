@@ -11,21 +11,60 @@ sites:
     url: https://pwd.imtd.top/alive
   - name: Brintools API Service
     url: https://brintools.com/actuator/health
+  - name: XPay管理后台
+    url: https://admin.i-paying.com/actuator/health
+  - name: XPay Payin
+    url: https://open.i-paying.com/actuator/health
+  - name: XPay Payout
+    url: https://po.i-paying.com/actuator/health
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
   # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
   #cname: demo.upptime.js.org
-  baseUrl: /all-status
+  baseUrl: /$REPO
   logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  name: "Service Monitor" 
+  introTitle: "**系统服务实时监控**"
+  introMessage: "m.imtd.top"
   navbar:
-    - title: Status
-      href: /
-    - title: GitHub
-      href: https://github.com/$OWNER/$REPO
+    - title: "Home"
+      href: /$REPO
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+  customCSS: |
+    footer { text-align: center; padding: 2rem 0; opacity: 0.6; font-size: 0.85rem; }
+    footer a { color: var(--text-color) !important; text-decoration: underline; }
+    /* 如果想彻底隐藏页脚的 "Powered by Upptime" 可以取消注释以下代码 */
+    /* footer p { display: none; } */
+
+notifications:
+  - type: custom
+    url: https://open.feishu.cn/open-apis/bot/v2/hook/767a4477-e749-4922-98f6-876d867d92fd
+    method: POST
+    headers:
+      Content-Type: application/json
+    # 转换为飞书支持的纯文本或富文本 JSON 格式
+    # Upptime 支持的变量：$TITLE (通知标题), $BODY (具体故障/恢复详情)
+    body: |
+      {
+        "msg_type": "post",
+        "content": {
+          "post": {
+            "zh_cn": {
+              "title": "【服务监控告警】",
+              "content": [
+                [
+                  {
+                    "tag": "text",
+                    "text": "$TITLE\n"
+                  },
+                  {
+                    "tag": "text",
+                    "text": "$BODY"
+                  }
+                ]
+              ]
+            }
+          }
+        }
+      }
