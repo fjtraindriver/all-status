@@ -1,7 +1,7 @@
-url: https://brintools.com/actuator/health
+url: $SITE_BTS_API
 status: up
 code: 200
-responseTime: 785
-lastUpdated: 2026-07-01T10:31:53.823Z
+responseTime: 1412
+lastUpdated: 2026-07-01T10:52:19.518Z
 startTime: 2026-07-01T09:23:51.149Z
 generator: Upptime <https://github.com/upptime/upptime>
