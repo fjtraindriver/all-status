@@ -1,7 +1,7 @@
-url: https://po.i-paying.com/actuator/health
+url: $SITE_XPAY_PAYOUT
 status: up
 code: 200
-responseTime: 1033
-lastUpdated: 2026-07-01T10:31:59.366Z
+responseTime: 1275
+lastUpdated: 2026-07-01T10:52:29.338Z
 startTime: 2026-07-01T10:28:42.547Z
 generator: Upptime <https://github.com/upptime/upptime>
