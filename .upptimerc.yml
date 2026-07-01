@@ -4,19 +4,19 @@ repo: all-status # The name of this repository
 
 sites:
   - name: CLI Proxy API
-    url: https://cpa.imtd.top
+    url: $SITE_CPA
   - name: New-API
-    url: https://ai.imtd.top/api/notice
+    url: $SITE_NEW_API
   - name: Vaultwarden Service
     url: https://pwd.imtd.top/alive
   - name: Brintools API Service
-    url: https://brintools.com/actuator/health
+    url: $SITE_BTS_API
   - name: XPay管理后台
-    url: https://admin.i-paying.com/actuator/health
+    url: $SITE_XPAY_ADMIN
   - name: XPay Payin
-    url: https://open.i-paying.com/actuator/health
+    url: $SITE_XPAY_PAYIN
   - name: XPay Payout
-    url: https://po.i-paying.com/actuator/health
+    url: $SITE_XPAY_PAYOUT
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
@@ -39,7 +39,7 @@ status-website:
 
 notifications:
   - type: custom
-    url: https://open.feishu.cn/open-apis/bot/v2/hook/767a4477-e749-4922-98f6-876d867d92fd
+    url: $FEISHU_WEBHOOK
     method: POST
     headers:
       Content-Type: application/json
