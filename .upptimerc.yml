@@ -41,16 +41,9 @@ status-website:
   theme: "auto"
 
   customCSS: |
-    /* 彻底隐藏底部带有 GitHub / Upptime 标识的原厂页脚内容 */
-    footer p { display: none !important; }
-    /* 创建一个自定义的纯净页脚样式 */
-    footer::after { 
-      content: "© 2026 M.IMTD.TOP. All Rights Reserved."; 
-      display: block; 
-      text-align: center; 
-      padding: 2rem 0; 
-      font-size: 0.85rem; 
-      opacity: 0.5; 
-    }
-    /* 美化状态页卡片阴影，使其看起来更具有现代高级感 */
-    .card { border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03); }
+    footer { text-align: center; padding: 3rem 0; opacity: 0.5; font-size: 0.8rem; }
+    footer a { color: inherit !important; text-decoration: underline; }
+    .repo-link { display: none !important; }
+
+i18n:
+  footer: "Copyright © 2026 M.IMTD.TOP. All rights reserved."
