@@ -5,18 +5,25 @@ repo: all-status # The name of this repository
 sites:
   - name: CLI Proxy API
     url: $SITE_CPA
+    method: GET
   - name: New-API
     url: $SITE_NEW_API
+    method: GET
   - name: Vaultwarden Service
-    url: https://pwd.imtd.top/alive
+    url: $SITE_PWD
+    method: GET
   - name: Brintools API Service
     url: $SITE_BTS_API
+    method: GET
   - name: XPay管理后台
     url: $SITE_XPAY_ADMIN
+    method: GET
   - name: XPay Payin
     url: $SITE_XPAY_PAYIN
+    method: GET
   - name: XPay Payout
     url: $SITE_XPAY_PAYOUT
+    method: GET
 
 status-website:
   # Add your custom domain name, or remove the `cname` line if you don't have a domain
@@ -31,8 +38,19 @@ status-website:
     - title: "Home"
       href: /all-status
 
+  theme: "auto"
+
   customCSS: |
-    footer { text-align: center; padding: 2rem 0; opacity: 0.6; font-size: 0.85rem; }
-    footer a { color: var(--text-color) !important; text-decoration: underline; }
-    /* 如果想彻底隐藏页脚的 "Powered by Upptime" 可以取消注释以下代码 */
-    footer p { display: none; }
+    /* 彻底隐藏底部带有 GitHub / Upptime 标识的原厂页脚内容 */
+    footer p { display: none !important; }
+    /* 创建一个自定义的纯净页脚样式 */
+    footer::after { 
+      content: "© 2026 M.IMTD.TOP. All Rights Reserved."; 
+      display: block; 
+      text-align: center; 
+      padding: 2rem 0; 
+      font-size: 0.85rem; 
+      opacity: 0.5; 
+    }
+    /* 美化状态页卡片阴影，使其看起来更具有现代高级感 */
+    .card { border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.03); }
