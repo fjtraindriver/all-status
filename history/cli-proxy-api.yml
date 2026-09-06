@@ -1,7 +1,7 @@
 url: $SITE_CPA
-status: up
-code: 200
-responseTime: 181
-lastUpdated: 2026-09-06T00:32:28.276Z
+status: down
+code: 502
+responseTime: 326
+lastUpdated: 2026-09-06T19:37:32.274Z
 startTime: 2026-07-01T09:23:49.281Z
 generator: Upptime <https://github.com/upptime/upptime>
