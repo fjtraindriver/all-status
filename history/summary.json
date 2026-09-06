@@ -4,19 +4,20 @@
     "url": "$SITE_CPA",
     "icon": "https://icons.duckduckgo.com/ip3/null.ico",
     "slug": "cli-proxy-api",
-    "status": "up",
-    "uptime": "99.83%",
-    "uptimeDay": "100.00%",
+    "status": "down",
+    "uptime": "99.84%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
-    "uptimeYear": "99.83%",
-    "time": 537,
-    "timeDay": 181,
-    "timeWeek": 311,
-    "timeMonth": 305,
-    "timeYear": 537,
+    "uptimeYear": "99.84%",
+    "time": 534,
+    "timeDay": 254,
+    "timeWeek": 313,
+    "timeMonth": 306,
+    "timeYear": 534,
     "dailyMinutesDown": {
-      "2026-07-30": 160
+      "2026-07-30": 160,
+      "2026-09-06": 0
     }
   },
   {
