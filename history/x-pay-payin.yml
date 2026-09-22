@@ -1,7 +1,7 @@
 url: $SITE_XPAY_PAYIN
-status: down
-code: 503
-responseTime: 1154
-lastUpdated: 2026-09-22T01:25:11.343Z
+status: up
+code: 200
+responseTime: 1064
+lastUpdated: 2026-09-22T05:28:08.976Z
 startTime: 2026-07-01T10:28:40.726Z
 generator: Upptime <https://github.com/upptime/upptime>
